@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html,
+	body,
+	#root {
+		height: 100%;
+	}
+
+	body {
+		@apply bg-white text-black dark:bg-gray-800 dark:text-white;
+	}
+
+	input,
+	select,
+	textarea {
+		@apply rounded border border-gray-200 bg-white px-0.5 text-black dark:border-gray-600 dark:bg-gray-800 dark:text-white;
+	}
+
+	a {
+		@apply text-blue-700 underline dark:text-blue-300;
+	}
+
+	summary {
+		@apply cursor-pointer select-none underline;
+	}
+
+	h1 {
+		@apply text-3xl;
+	}
+
+	h2 {
+		@apply text-2xl;
+	}
+
+	h3 {
+		@apply text-xl;
+	}
+
+	h4 {
+		@apply text-lg;
+	}
+
+	p + p {
+		@apply mt-1.5;
+	}
+
+	.odd-rows {
+		@apply odd:bg-gray-200 odd:dark:bg-gray-700;
+	}
+
+	button:disabled {
+		@apply cursor-not-allowed opacity-70;
+	}
+
+	button {
+		@apply rounded border border-gray-600 px-2 py-0 cannot-hover:py-2 dark:border-gray-300;
+	}
+
+	.border-default {
+		@apply border border-gray-300 dark:border-gray-600;
+	}
+}
